@@ -1,6 +1,6 @@
 " Use different colorschemes for different times of a day.
 " Ref: https://stackoverflow.com/questions/7588531/vim-set-color-theme-based-off-time-of-day
-if strftime("%H") < 18
+if strftime("%H") > 7 && strftime("%H") < 18
   colorscheme darkblue
   " https://stackoverflow.com/questions/9065941/how-can-i-change-vim-status-line-color
   hi StatusLine ctermbg=black ctermfg=blue
