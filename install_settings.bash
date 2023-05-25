@@ -52,6 +52,10 @@ mkdir "~/.fonts"
 mv FiraCode.zip "~/.fonts/"
 cd "~/.fonts" && unzip FiraCode.zip && rm FiraCode.zip && fc-cache -fv && cd -
 
+# TODO(me@weidongsun.com) Show note.
+# NOTE: To use firacode nerd font in gnome terminal, you have to set Terminal->Preference->Your default profile, and
+# change the default font to Firacode Nerd Font. Otherwise, you are going to see strange characters in your terminal.
+
 curl -sS https://starship.rs/install.sh | sh
 echo 'eval "$(starship init bash)"' >> "~/.bashrc"
 mkdir -p "~/.config" && touch "~/.config/starship.toml"
