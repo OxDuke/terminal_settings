@@ -47,7 +47,7 @@ vim +PluginInstall +qall
 # Install starship
 ##################
 sudo apt update && sudo apt install -y wget curl
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
 mkdir "$HOME/.fonts"
 mv FiraCode.zip "$HOME/.fonts/"
 cd "$HOME/.fonts" && unzip FiraCode.zip && rm FiraCode.zip && fc-cache -fv && cd -
