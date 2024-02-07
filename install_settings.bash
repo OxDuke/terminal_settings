@@ -6,6 +6,12 @@ set -e
 # Bash settings
 # TODO(Weidong): We need zsh support.
 
+sudo apt update
+sudo apt install -y tmux vim ack silversearcher-ag
+# Install xsel or xclip for tmux-yank
+sudo apt-get install -y xsel xclip
+
+
 ####################################
 # Install Dracula theme for Terminal
 ####################################
@@ -46,8 +52,8 @@ vim +PluginInstall +qall
 ##################
 # Install starship
 ##################
-sudo apt update && sudo apt install -y wget curl
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+sudo apt install -y wget curl
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
 mkdir "~/.fonts"
 mv FiraCode.zip "~/.fonts/"
 cd "~/.fonts" && unzip FiraCode.zip && rm FiraCode.zip && fc-cache -fv && cd -
