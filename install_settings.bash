@@ -6,6 +6,12 @@ set -e
 # Bash settings
 # TODO(Weidong): We need zsh support.
 
+sudo apt update
+sudo apt install -y tmux vim ack silversearcher-ag
+# Install xsel or xclip for tmux-yank
+sudo apt-get install -y xsel xclip
+
+
 ####################################
 # Install Dracula theme for Terminal
 ####################################
@@ -47,10 +53,11 @@ vim +PluginInstall +qall
 # Install starship
 ##################
 sudo apt update && sudo apt install -y wget curl
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
 mkdir "$HOME/.fonts"
 mv FiraCode.zip "$HOME/.fonts/"
 cd "$HOME/.fonts" && unzip FiraCode.zip && rm FiraCode.zip && fc-cache -fv && cd -
+
 
 # TODO(me@weidongsun.com) Show note.
 # NOTE: To use firacode nerd font in gnome terminal, you have to set Terminal->Preference->Your default profile, and
